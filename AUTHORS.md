@@ -1,11 +1,11 @@
 List of Authors/Contributors
 ======
 
-Current Maintainer
-------------------
+Maintainer of the Original Benchmark
+------------
 Milos Jovanovik <geosparql-benchmark{at}openlinksw.com>
 
-Contributors
+Contributors to the Original Benchmark
 ------------
  * Milos Jovanovik, OpenLink Software, UK
  * Timo Homburg, Mainz University Of Applied Sciences, Germany
@@ -13,4 +13,4 @@ Contributors
 
 Acknowledgement
 ------------
-The benchmark has been developed as part of the [HOBBIT](https://project-hobbit.eu/) and [SAGE](https://sage.cs.uni-paderborn.de/sage/) research projects.
+The benchmark was developed as part of the [HOBBIT](https://project-hobbit.eu/) and [SAGE](https://sage.cs.uni-paderborn.de/sage/) research projects.
