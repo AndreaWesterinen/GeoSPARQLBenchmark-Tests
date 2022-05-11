@@ -40,6 +40,7 @@
 :req07 a mf:QueryEvaluationTest ;
     mf:name    "Selection of all entities of type geo:Geometry" ;
     rdfs:comment "Selecting all entities of type geo:Geometry" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r07.rq ;
@@ -50,6 +51,7 @@
 :req08-1 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:hasGeometry" ;
     rdfs:comment "Selecting the value of geometry A denoted by the property, geo:hasGeometry" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r08-1.rq ;
@@ -60,6 +62,7 @@
 :req08-2 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:hasDefaultGeometry" ;
     rdfs:comment "Selecting the value of geometry A denoted by the property, geo:hasDefaultGeometry" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r08-2.rq ;
@@ -70,6 +73,7 @@
 :req09-1 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:dimension" ;
     rdfs:comment "Selecting the value of geometry A denoted by the property, geo:dimension" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r09-1.rq ;
@@ -80,6 +84,7 @@
 :req09-2 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:coordinateDimension" ;
     rdfs:comment "Selecting the value of geometry A denoted by the property, geo:coordinateDimension" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r09-2.rq ;
@@ -90,6 +95,7 @@
 :req09-3 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:spatialDimension" ;
     rdfs:comment "Selecting the value of geometry A denoted by the property, geo:spatialDimension" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r09-3.rq ;
@@ -100,16 +106,18 @@
 :req09-4 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:isEmpty" ;
     rdfs:comment "Selecting the value of geometry A denoted by the property, geo:isEmpty" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r09-4.rq ;
         qt:data   :dataset.rdf
     ] ;
-    mf:result  :query-r09-4-alternative-2.srx .
+    mf:result  :query-r09-4-alternative-2.srx .    # List the largest # of the alternative files
 
 :req09-5 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:isSimple" ;
     rdfs:comment "Selecting the value of geometry A denoted by the property, geo:isSimple" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r09-5.rq ;
@@ -120,6 +128,7 @@
 :req09-6 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:hasSerialization" ;
     rdfs:comment "Selecting the value of geometry A denoted by the property, geo:hasSerialization" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r09-6.rq ;
@@ -130,6 +139,7 @@
 :req10 a mf:QueryEvaluationTest ;
     mf:name    "Testing the datatype of a WKT literal" ;
     rdfs:comment "Checking the datatype of a correctly defined WKT literal from the dataset" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r10.rq ;
@@ -140,6 +150,7 @@
 :req11 a mf:QueryEvaluationTest ;
     mf:name    "Testing the equality of two geometries" ;
     rdfs:comment "Checking the equality of two geometries from the dataset" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r11.rq ;
@@ -150,6 +161,7 @@
 :req12 a mf:QueryEvaluationTest ;
     mf:name    "Testing if axis order is interpreted according to the spatial reference system" ;
     rdfs:comment "Checking if the system interprets the axis order within a point geometry according to the spatial reference system being used" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r12.rq ;
@@ -160,6 +172,7 @@
 :req13-1 a mf:QueryEvaluationTest ;
     mf:name    "Testing if an empty WKT Literal is interpreted as empty (1)" ;
     rdfs:comment "Checking if an empty RDFS Literal of type geo:wktLiteral is interpreted as an empty geometry (1)" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r13-1.rq ;
@@ -170,6 +183,7 @@
 :req13-2 a mf:QueryEvaluationTest ;
     mf:name    "Testing if an empty WKT Literal is interpreted as empty (2)" ;
     rdfs:comment "Checking if an empty RDFS Literal of type geo:wktLiteral is interpreted as an empty geometry (2)" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r13-2.rq ;
@@ -180,6 +194,7 @@
 :req14 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:asWKT" ;
     rdfs:comment "Checking the geo:asWKT value of geometry A against the expected literal value" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r14.rq ;
@@ -190,6 +205,7 @@
 :req19-1 a mf:QueryEvaluationTest ;
     mf:name    "Testing geof:distance" ;
     rdfs:comment "Checking support of the geospatial function, geof:distance" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r19-1-1.rq ;
@@ -200,6 +216,7 @@
 :req19-2 a mf:QueryEvaluationTest ;
     mf:name    "Testing geof:buffer" ;
     rdfs:comment "Checking support of the geospatial function, geof:buffer" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r19-2-1.rq ;
@@ -210,6 +227,7 @@
 :req19-3 a mf:QueryEvaluationTest ;
     mf:name    "Testing geof:convexHull" ;
     rdfs:comment "Checking support of the geospatial function, geof:convexHull" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r19-3-1.rq ;
@@ -220,6 +238,7 @@
 :req19-4 a mf:QueryEvaluationTest ;
     mf:name    "Testing geof:intersection" ;
     rdfs:comment "Checking support of the geospatial function, geof:intersection" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r19-4-1.rq ;
@@ -230,6 +249,7 @@
 :req19-5 a mf:QueryEvaluationTest ;
     mf:name    "Testing geof:union" ;
     rdfs:comment "Checking support of the geospatial function, geof:union" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r19-5-1.rq ;
@@ -240,6 +260,7 @@
 :req19-6 a mf:QueryEvaluationTest ;
     mf:name    "Testing geof:difference" ;
     rdfs:comment "Checking support of the geospatial function, geof:difference" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r19-6.rq ;
@@ -250,6 +271,7 @@
 :req19-7 a mf:QueryEvaluationTest ;
     mf:name    "Testing geof:symDifference" ;
     rdfs:comment "Checking support of the geospatial function, geof:symDifference" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r19-7-1.rq ;
@@ -260,6 +282,7 @@
 :req19-8 a mf:QueryEvaluationTest ;
     mf:name    "Testing geof:envelope" ;
     rdfs:comment "Checking support of the geospatial function, geof:envelope" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r19-8-1.rq ;
@@ -270,6 +293,7 @@
 :req19-9 a mf:QueryEvaluationTest ;
     mf:name    "Testing geof:boundary" ;
     rdfs:comment "Checking support of the geospatial function, geof:boundary" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r19-9-1.rq ;

@@ -19,6 +19,7 @@
 :req01 a mf:QueryEvaluationTest ;
     mf:name    "Selection of the first geometry triple" ;
     rdfs:comment "Selecting the first triple where geometry A is the subject" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r01.rq ;
@@ -29,6 +30,7 @@
 :req02 a mf:QueryEvaluationTest ;
     mf:name    "Selection of geo:SpatialObject" ;
     rdfs:comment "Selecting the first entity of type geo:SpatialObject" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r02.rq ;
@@ -39,6 +41,7 @@
 :req03 a mf:QueryEvaluationTest ;
     mf:name    "Selection of geo:Feature" ;
     rdfs:comment "Selecting the first entity of type geo:Feature" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r03.rq ;

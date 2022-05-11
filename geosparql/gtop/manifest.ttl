@@ -24,16 +24,18 @@
 :req22-1 a mf:QueryEvaluationTest ;
     mf:name    "Testing the function, geof:sfEquals" ;
     rdfs:comment "Testing the function, geof:sfEquals, for WKT" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r22-1-1.rq ;
         qt:data   :dataset.rdf
     ] ;
-    mf:result  :query-r22-1-1-alternative-2.srx .
+    mf:result  :query-r22-1-1-alternative-2.srx .  # List the largest # of the alternative files
 
 :req22-2 a mf:QueryEvaluationTest ;
     mf:name    "Testing the function, geof:sfDisjoint" ;
     rdfs:comment "Testing the function, geof:sfDisjoint, for WKT" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r22-2-1.rq ;
@@ -44,6 +46,7 @@
 :req22-3 a mf:QueryEvaluationTest ;
     mf:name    "Testing the function, geof:sfIntersects" ;
     rdfs:comment "Testing the function, geof:sfIntersects, for WKT" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r22-3-1.rq ;
@@ -54,6 +57,7 @@
 :req22-4 a mf:QueryEvaluationTest ;
     mf:name    "Testing the function, geof:sfTouches" ;
     rdfs:comment "Testing the function, geof:sfTouches, for WKT" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r22-4-1.rq ;
@@ -64,6 +68,7 @@
 :req22-5 a mf:QueryEvaluationTest ;
     mf:name    "Testing the function, geof:sfCrosses" ;
     rdfs:comment "Testing the function, geof:sfCrosses, for WKT" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r22-5-1.rq ;
@@ -74,6 +79,7 @@
 :req22-6 a mf:QueryEvaluationTest ;
     mf:name    "Testing the function, geof:sfWithin" ;
     rdfs:comment "Testing the function, geof:sfWithin, for WKT" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r22-6-1.rq ;
@@ -84,6 +90,7 @@
 :req22-7 a mf:QueryEvaluationTest ;
     mf:name    "Testing the function, geof:sfContains" ;
     rdfs:comment "Testing the function, geof:sfContains, for WKT" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r22-7-1.rq ;
@@ -94,6 +101,7 @@
 :req22-8 a mf:QueryEvaluationTest ;
     mf:name    "Testing the function, geof:sfOverlaps" ;
     rdfs:comment "Testing the function, geof:sfOverlaps, for WKT" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r22-8-1.rq ;

@@ -24,6 +24,7 @@
 :req04-1 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:sfEquals" ;
     rdfs:comment "Testing the property, geo:sfEquals" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r04-1.rq ;
@@ -34,6 +35,7 @@
 :req04-2 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:sfDisjoint" ;
     rdfs:comment "Testing the property, geo:sfDisjoint" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r04-2.rq ;
@@ -44,6 +46,7 @@
 :req04-3 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:sfIntersects" ;
     rdfs:comment "Testing the property, geo:sfIntersects" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r04-3.rq ;
@@ -54,6 +57,7 @@
 :req04-4 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:sfTouches" ;
     rdfs:comment "Testing the property, geo:sfTouches" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r04-4.rq ;
@@ -64,6 +68,7 @@
 :req04-5 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:sfCrosses" ;
     rdfs:comment "Testing the property, geo:sfCrosses" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r04-5.rq ;
@@ -74,6 +79,7 @@
 :req04-6 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:sfWithin" ;
     rdfs:comment "Testing the property, geo:sfWithin" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r04-6.rq ;
@@ -84,6 +90,7 @@
 :req04-7 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:sfContains" ;
     rdfs:comment "Testing the property, geo:sfContains" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r04-7.rq ;
@@ -94,6 +101,7 @@
 :req04-8 a mf:QueryEvaluationTest ;
     mf:name    "Testing geo:sfOverlaps" ;
     rdfs:comment "Testing the property, geo:sfOverlaps" ;
+    dawgt:approval dawgt:Approved ;
     mf:action
     [
         qt:query  :query-r04-8.rq ;
