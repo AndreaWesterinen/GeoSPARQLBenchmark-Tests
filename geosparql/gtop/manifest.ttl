@@ -1,0 +1,102 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-where/manifest#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix ut:     <http://www.w3.org/2009/sparql/tests/test-update#> .
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "GeoSPARQL Core" ;
+    rdfs:comment "Tests for GeoSPARQL Core" ;
+    mf:entries
+    (
+        :req22-1
+        :req22-2
+        :req22-3
+        :req22-4
+        :req22-5
+        :req22-6
+        :req22-7
+        :req22-8
+    ).
+
+:req22-1 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the function, geof:sfEquals" ;
+    rdfs:comment "Testing the function, geof:sfEquals, for WKT" ;
+    mf:action
+    [
+        qt:query  :query-r22-1-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r22-1-1-alternative-2.srx .
+
+:req22-2 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the function, geof:sfDisjoint" ;
+    rdfs:comment "Testing the function, geof:sfDisjoint, for WKT" ;
+    mf:action
+    [
+        qt:query  :query-r22-2-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r22-2-1-alternative-2.srx .
+
+:req22-3 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the function, geof:sfIntersects" ;
+    rdfs:comment "Testing the function, geof:sfIntersects, for WKT" ;
+    mf:action
+    [
+        qt:query  :query-r22-3-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r22-3-1-alternative-2.srx .
+
+:req22-4 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the function, geof:sfTouches" ;
+    rdfs:comment "Testing the function, geof:sfTouches, for WKT" ;
+    mf:action
+    [
+        qt:query  :query-r22-4-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r22-4-1-alternative-2.srx .
+
+:req22-5 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the function, geof:sfCrosses" ;
+    rdfs:comment "Testing the function, geof:sfCrosses, for WKT" ;
+    mf:action
+    [
+        qt:query  :query-r22-5-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result :query-r22-5-1-alternative-2.srx .
+
+:req22-6 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the function, geof:sfWithin" ;
+    rdfs:comment "Testing the function, geof:sfWithin, for WKT" ;
+    mf:action
+    [
+        qt:query  :query-r22-6-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r22-6-1-alternative-2.srx .
+
+:req22-7 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the function, geof:sfContains" ;
+    rdfs:comment "Testing the function, geof:sfContains, for WKT" ;
+    mf:action
+    [
+        qt:query  :query-r22-7-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result :query-r22-7-1-alternative-2.srx .
+
+:req22-8 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the function, geof:sfOverlaps" ;
+    rdfs:comment "Testing the function, geof:sfOverlaps, for WKT" ;
+    mf:action
+    [
+        qt:query  :query-r22-8-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r22-8-1-alternative-2.srx .

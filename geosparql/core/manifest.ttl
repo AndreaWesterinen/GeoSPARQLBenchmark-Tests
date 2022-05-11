@@ -1,0 +1,47 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-where/manifest#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix ut:     <http://www.w3.org/2009/sparql/tests/test-update#> .
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "GeoSPARQL Core" ;
+    rdfs:comment "Tests for GeoSPARQL Core" ;
+    mf:entries
+    (
+        :req01
+        :req02
+        :req03
+    ).
+
+:req01 a mf:QueryEvaluationTest ;
+    mf:name    "Selection of the first geometry triple" ;
+    rdfs:comment "Selecting the first triple where geometry A is the subject" ;
+    mf:action
+    [
+        qt:query  :query-r01.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r01.srx .
+
+:req02 a mf:QueryEvaluationTest ;
+    mf:name    "Selection of geo:SpatialObject" ;
+    rdfs:comment "Selecting the first entity of type geo:SpatialObject" ;
+    mf:action
+    [
+        qt:query  :query-r02.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r02.srx .
+
+:req03 a mf:QueryEvaluationTest ;
+    mf:name    "Selection of geo:Feature" ;
+    rdfs:comment "Selecting the first entity of type geo:Feature" ;
+    mf:action
+    [
+        qt:query  :query-r03.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r03.srx .

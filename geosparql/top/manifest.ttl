@@ -1,0 +1,102 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-where/manifest#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix ut:     <http://www.w3.org/2009/sparql/tests/test-update#> .
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "GeoSPARQL Core" ;
+    rdfs:comment "Tests for GeoSPARQL Core" ;
+    mf:entries
+    (
+        :req04-1
+        :req04-2
+        :req04-3
+        :req04-4
+        :req04-5
+        :req04-6
+        :req04-7
+        :req04-8
+    ).
+
+:req04-1 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:sfEquals" ;
+    rdfs:comment "Testing the property, geo:sfEquals" ;
+    mf:action
+    [
+        qt:query  :query-r04-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r04-1.srx .
+
+:req04-2 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:sfDisjoint" ;
+    rdfs:comment "Testing the property, geo:sfDisjoint" ;
+    mf:action
+    [
+        qt:query  :query-r04-2.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r04-2.srx .
+
+:req04-3 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:sfIntersects" ;
+    rdfs:comment "Testing the property, geo:sfIntersects" ;
+    mf:action
+    [
+        qt:query  :query-r04-3.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r04-3.srx .
+
+:req04-4 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:sfTouches" ;
+    rdfs:comment "Testing the property, geo:sfTouches" ;
+    mf:action
+    [
+        qt:query  :query-r04-4.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r04-4.srx .
+
+:req04-5 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:sfCrosses" ;
+    rdfs:comment "Testing the property, geo:sfCrosses" ;
+    mf:action
+    [
+        qt:query  :query-r04-5.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r04-5.srx .
+
+:req04-6 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:sfWithin" ;
+    rdfs:comment "Testing the property, geo:sfWithin" ;
+    mf:action
+    [
+        qt:query  :query-r04-6.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r04-6.srx .
+
+:req04-7 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:sfContains" ;
+    rdfs:comment "Testing the property, geo:sfContains" ;
+    mf:action
+    [
+        qt:query  :query-r04-7.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r04-7.srx .
+
+:req04-8 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:sfOverlaps" ;
+    rdfs:comment "Testing the property, geo:sfOverlaps" ;
+    mf:action
+    [
+        qt:query  :query-r04-8.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r04-8.srx .

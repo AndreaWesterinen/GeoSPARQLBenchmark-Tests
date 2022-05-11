@@ -1,0 +1,278 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.w3.org/2009/sparql/docs/tests/data-sparql11/delete-where/manifest#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix ut:     <http://www.w3.org/2009/sparql/tests/test-update#> .
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "GeoSPARQL Core" ;
+    rdfs:comment "Tests for GeoSPARQL Core" ;
+    mf:entries
+    (
+        :req07
+        :req08-1
+        :req08-2
+        :req09-1
+        :req09-2
+        :req09-3
+        :req09-4
+        :req09-5
+        :req09-6
+        :req10
+        :req11
+        :req12
+        :req13-1
+        :req13-2
+        :req14
+        :req19-1
+        :req19-2
+        :req19-3
+        :req19-4
+        :req19-5
+        :req19-6
+        :req19-7
+        :req19-8
+        :req19-9
+    ).
+
+:req07 a mf:QueryEvaluationTest ;
+    mf:name    "Selection of all entities of type geo:Geometry" ;
+    rdfs:comment "Selecting all entities of type geo:Geometry" ;
+    mf:action
+    [
+        qt:query  :query-r07.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r07.srx .
+
+:req08-1 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:hasGeometry" ;
+    rdfs:comment "Selecting the value of geometry A denoted by the property, geo:hasGeometry" ;
+    mf:action
+    [
+        qt:query  :query-r08-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r08-1.srx .
+
+:req08-2 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:hasDefaultGeometry" ;
+    rdfs:comment "Selecting the value of geometry A denoted by the property, geo:hasDefaultGeometry" ;
+    mf:action
+    [
+        qt:query  :query-r08-2.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r08-2.srx .
+
+:req09-1 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:dimension" ;
+    rdfs:comment "Selecting the value of geometry A denoted by the property, geo:dimension" ;
+    mf:action
+    [
+        qt:query  :query-r09-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r09-1.srx .
+
+:req09-2 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:coordinateDimension" ;
+    rdfs:comment "Selecting the value of geometry A denoted by the property, geo:coordinateDimension" ;
+    mf:action
+    [
+        qt:query  :query-r09-2.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r09-2.srx .
+
+:req09-3 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:spatialDimension" ;
+    rdfs:comment "Selecting the value of geometry A denoted by the property, geo:spatialDimension" ;
+    mf:action
+    [
+        qt:query  :query-r09-3.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r09-3.srx .
+
+:req09-4 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:isEmpty" ;
+    rdfs:comment "Selecting the value of geometry A denoted by the property, geo:isEmpty" ;
+    mf:action
+    [
+        qt:query  :query-r09-4.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r09-4-alternative-2.srx .
+
+:req09-5 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:isSimple" ;
+    rdfs:comment "Selecting the value of geometry A denoted by the property, geo:isSimple" ;
+    mf:action
+    [
+        qt:query  :query-r09-5.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result :query-r09-5-alternative-2.srx .
+
+:req09-6 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:hasSerialization" ;
+    rdfs:comment "Selecting the value of geometry A denoted by the property, geo:hasSerialization" ;
+    mf:action
+    [
+        qt:query  :query-r09-6.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result :query-r09-6-alternative-2.srx .
+
+:req10 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the datatype of a WKT literal" ;
+    rdfs:comment "Checking the datatype of a correctly defined WKT literal from the dataset" ;
+    mf:action
+    [
+        qt:query  :query-r10.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r10.srx .
+
+:req11 a mf:QueryEvaluationTest ;
+    mf:name    "Testing the equality of two geometries" ;
+    rdfs:comment "Checking the equality of two geometries from the dataset" ;
+    mf:action
+    [
+        qt:query  :query-r11.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result :query-r11-alternative-2.srx .
+
+:req12 a mf:QueryEvaluationTest ;
+    mf:name    "Testing if axis order is interpreted according to the spatial reference system" ;
+    rdfs:comment "Checking if the system interprets the axis order within a point geometry according to the spatial reference system being used" ;
+    mf:action
+    [
+        qt:query  :query-r12.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result :query-r12-alternative-2.srx .
+
+:req13-1 a mf:QueryEvaluationTest ;
+    mf:name    "Testing if an empty WKT Literal is interpreted as empty (1)" ;
+    rdfs:comment "Checking if an empty RDFS Literal of type geo:wktLiteral is interpreted as an empty geometry (1)" ;
+    mf:action
+    [
+        qt:query  :query-r13-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result :query-r13-1-alternative-2.srx .
+
+:req13-2 a mf:QueryEvaluationTest ;
+    mf:name    "Testing if an empty WKT Literal is interpreted as empty (2)" ;
+    rdfs:comment "Checking if an empty RDFS Literal of type geo:wktLiteral is interpreted as an empty geometry (2)" ;
+    mf:action
+    [
+        qt:query  :query-r13-2.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result :query-r13-2-alternative-2.srx .
+
+:req14 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geo:asWKT" ;
+    rdfs:comment "Checking the geo:asWKT value of geometry A against the expected literal value" ;
+    mf:action
+    [
+        qt:query  :query-r14.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r14.srx .
+
+:req19-1 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geof:distance" ;
+    rdfs:comment "Checking support of the geospatial function, geof:distance" ;
+    mf:action
+    [
+        qt:query  :query-r19-1-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r19-1-1.srx .
+
+:req19-2 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geof:buffer" ;
+    rdfs:comment "Checking support of the geospatial function, geof:buffer" ;
+    mf:action
+    [
+        qt:query  :query-r19-2-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r19-2-1-alternative-4.srx .
+
+:req19-3 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geof:convexHull" ;
+    rdfs:comment "Checking support of the geospatial function, geof:convexHull" ;
+    mf:action
+    [
+        qt:query  :query-r19-3-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r19-3-1-alternative-4.srx .
+
+:req19-4 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geof:intersection" ;
+    rdfs:comment "Checking support of the geospatial function, geof:intersection" ;
+    mf:action
+    [
+        qt:query  :query-r19-4-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r19-4-1-alternative-4.srx .
+
+:req19-5 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geof:union" ;
+    rdfs:comment "Checking support of the geospatial function, geof:union" ;
+    mf:action
+    [
+        qt:query  :query-r19-5-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r19-5-1-alternative-4.srx .
+
+:req19-6 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geof:difference" ;
+    rdfs:comment "Checking support of the geospatial function, geof:difference" ;
+    mf:action
+    [
+        qt:query  :query-r19-6.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r19-6.srx .
+
+:req19-7 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geof:symDifference" ;
+    rdfs:comment "Checking support of the geospatial function, geof:symDifference" ;
+    mf:action
+    [
+        qt:query  :query-r19-7-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r19-7-1-alternative-2.srx .
+
+:req19-8 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geof:envelope" ;
+    rdfs:comment "Checking support of the geospatial function, geof:envelope" ;
+    mf:action
+    [
+        qt:query  :query-r19-8-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r19-8-1-alternative-6.srx .
+
+:req19-9 a mf:QueryEvaluationTest ;
+    mf:name    "Testing geof:boundary" ;
+    rdfs:comment "Checking support of the geospatial function, geof:boundary" ;
+    mf:action
+    [
+        qt:query  :query-r19-9-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r19-9-1-alternative-8.srx .
