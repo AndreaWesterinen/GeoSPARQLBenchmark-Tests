@@ -15,7 +15,7 @@
 		<https://www.ogc.org/standards/geosparql/>
 	) .
 
-<https://www.ogc.org/standards/geosparql/> rdfs:label "GeoSPARQL Core" ;
+<https://www.ogc.org/standards/geosparql/> rdfs:label "GeoSPARQL" ;
 	mf:conformanceRequirement (
 		<core/manifest.ttl>
 		<top/manifest.ttl>
