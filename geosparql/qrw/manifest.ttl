@@ -1,0 +1,110 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <https://andreawesterinen.github.io/GeoSPARQLBenchmark-Tests/geosparql/geoext/> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dawgt:  <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix mf:     <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix qt:     <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> .
+@prefix ut:     <http://www.w3.org/2009/sparql/tests/test-update#> .
+
+<>  rdf:type mf:Manifest ;
+    rdfs:label "GeoSPARQL Rewrite" ;
+    rdfs:comment "Tests for GeoSPARQL Query Rewriting of the Simple Features" ;
+    mf:entries
+    (
+        :req28-1
+        :req28-2
+        :req28-3
+        :req28-4
+        :req28-5
+        :req28-6
+        :req28-7
+        :req28-8
+    ).
+
+:req28-1 a mf:QueryEvaluationTest ;
+    mf:name    "Testing query rewriting for geo:sfEquals" ;
+    rdfs:comment "Testing the property, geo:sfEquals, between features and geometries" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+    [
+        qt:query  :query-r28-1.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r28-1.srx .
+
+:req28-2 a mf:QueryEvaluationTest ;
+    mf:name    "Testing query rewriting for geo:sfDisjoint" ;
+    rdfs:comment "Testing the property, geo:sfDisjoint, between features and geometries" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+    [
+        qt:query  :query-r28-2.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r28-2.srx .
+
+:req28-3 a mf:QueryEvaluationTest ;
+    mf:name    "Testing query rewriting for geo:sfIntersects" ;
+    rdfs:comment "Testing the property, geo:sfIntersects, between features and geometries" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+    [
+        qt:query  :query-r28-3.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r28-3.srx .
+
+:req28-4 a mf:QueryEvaluationTest ;
+    mf:name    "Testing query rewriting for geo:sfTouches" ;
+    rdfs:comment "Testing the property, geo:sfTouches, between features and geometries" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+    [
+        qt:query  :query-r28-4.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r28-4.srx .
+
+:req28-5 a mf:QueryEvaluationTest ;
+    mf:name    "Testing query rewriting for geo:sfCrosses" ;
+    rdfs:comment "Testing the property, geo:sfCrosses, between features and geometries" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+    [
+        qt:query  :query-r28-5.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r28-5.srx .
+
+:req28-6 a mf:QueryEvaluationTest ;
+    mf:name    "Testing query rewriting for geo:sfWithin" ;
+    rdfs:comment "Testing the property, geo:sfWithin, between features and geometries" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+    [
+        qt:query  :query-r28-6.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r28-6.srx .
+
+:req28-7 a mf:QueryEvaluationTest ;
+    mf:name    "Testing query rewriting for geo:sfContains" ;
+    rdfs:comment "Testing the property, geo:sfContains, between features and geometries" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+    [
+        qt:query  :query-r28-7.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r28-7.srx .
+
+:req28-8 a mf:QueryEvaluationTest ;
+    mf:name    "Testing query rewriting for geo:sfOverlaps" ;
+    rdfs:comment "Testing the property, geo:sfOverlaps, between features and geometries" ;
+    dawgt:approval dawgt:Approved ;
+    mf:action
+    [
+        qt:query  :query-r28-8.rq ;
+        qt:data   :dataset.rdf
+    ] ;
+    mf:result  :query-r28-8.srx .

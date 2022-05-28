@@ -10,6 +10,7 @@
 		<top/manifest.ttl>
 		<geoext/manifest.ttl>
 		<gtop/manifest.ttl>
+		<qrw/manifest.ttl>
 	) ;
 	mf:includedSpecifications (
 		<https://www.ogc.org/standards/geosparql/>
@@ -21,4 +22,5 @@
 		<top/manifest.ttl>
 		<geoext/manifest.ttl>
 		<gtop/manifest.ttl>
+		<qrw/manifest.ttl>
 	).
